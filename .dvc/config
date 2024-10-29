@@ -1,0 +1,4 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = C:\Users\prach\AppData\Local\Temp\yt-sentiment-analyser
