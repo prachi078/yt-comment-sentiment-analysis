@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/yt-comment-sentiment-analysis/yt-comment-sentiment-analysis/mlruns/210100455852456030/9703179c94bf4decb097a747b320281f/artifacts
+end_time: 1732284622519
+entry_point_name: ''
+experiment_id: '210100455852456030'
+lifecycle_stage: active
+run_id: 9703179c94bf4decb097a747b320281f
+run_name: melodic-squirrel-207
+run_uuid: 9703179c94bf4decb097a747b320281f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732284612075
+status: 3
+tags: []
+user_id: runner

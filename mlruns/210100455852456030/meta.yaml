@@ -1,0 +1,6 @@
+artifact_location: file:///home/runner/work/yt-comment-sentiment-analysis/yt-comment-sentiment-analysis/mlruns/210100455852456030
+creation_time: 1732284612032
+experiment_id: '210100455852456030'
+last_update_time: 1732284612032
+lifecycle_stage: active
+name: dvc-pipeline-runs
