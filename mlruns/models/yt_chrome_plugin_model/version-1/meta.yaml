@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1732285363641
+current_stage: Staging
+description: null
+last_updated_timestamp: 1732285363643
+name: yt_chrome_plugin_model
+run_id: b5d0837aa43b4d11998bc7d50592cce1
+run_link: null
+source: file:///home/runner/work/yt-comment-sentiment-analysis/yt-comment-sentiment-analysis/mlruns/210100455852456030/b5d0837aa43b4d11998bc7d50592cce1/artifacts/lgbm_model
+status: READY
+status_message: null
+storage_location: file:///home/runner/work/yt-comment-sentiment-analysis/yt-comment-sentiment-analysis/mlruns/210100455852456030/b5d0837aa43b4d11998bc7d50592cce1/artifacts/lgbm_model
+user_id: null
+version: 1

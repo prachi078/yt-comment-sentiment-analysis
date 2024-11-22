@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/yt-comment-sentiment-analysis/yt-comment-sentiment-analysis/mlruns/210100455852456030/b5d0837aa43b4d11998bc7d50592cce1/artifacts
+end_time: 1732285362230
+entry_point_name: ''
+experiment_id: '210100455852456030'
+lifecycle_stage: active
+run_id: b5d0837aa43b4d11998bc7d50592cce1
+run_name: able-elk-931
+run_uuid: b5d0837aa43b4d11998bc7d50592cce1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732285351649
+status: 3
+tags: []
+user_id: runner
