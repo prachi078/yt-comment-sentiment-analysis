@@ -103,7 +103,7 @@ def main():
         # Save the processed data
         save_data(train_processed_data, test_processed_data, data_path='./data')
     except Exception as e:
-        logger.error('Failed to complete the data preprocessing process: %s', e)
+        logger.error('Failed to complete the data preprocessing processes: %s', e)
         print(f"Error: {e}")
 
 if __name__ == '__main__':
