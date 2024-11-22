@@ -20,7 +20,12 @@ import matplotlib.dates as mdates
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
+    
 # Define the preprocessing function
 def preprocess_comment(comment):
     """Apply preprocessing transformations to a comment."""
@@ -53,7 +58,8 @@ def preprocess_comment(comment):
 # Load the model and vectorizer from the model registry and local storage
 def load_model_and_vectorizer(model_name, model_version, vectorizer_path):
     # Set MLflow tracking URI to your server
-    mlflow.set_tracking_uri("http://ec2-13-232-230-230.ap-south-1.compute.amazonaws.com:5000/")  # Replace with your MLflow tracking URI
+    mlflow.set_tracking_uri(tracking_uri)
+
     client = MlflowClient()
     model_uri = f"models:/{model_name}/{model_version}"
     model = mlflow.pyfunc.load_model(model_uri)

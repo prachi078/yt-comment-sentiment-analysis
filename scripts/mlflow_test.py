@@ -1,8 +1,12 @@
 import mlflow
 import random
+from dotenv import load_dotenv
+import os
 
-# Set the MLflow tracking URI
-mlflow.set_tracking_uri("http://ec2-13-233-122-177.ap-south-1.compute.amazonaws.com:5000/")
+load_dotenv()
+tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
+    
+mlflow.set_tracking_uri(tracking_uri)
 
 # Start an MLflow run
 with mlflow.start_run():

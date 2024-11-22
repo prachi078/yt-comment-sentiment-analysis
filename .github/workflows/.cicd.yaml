@@ -26,7 +26,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install python-dotenv
 
       - name: Run pipeline
         env:

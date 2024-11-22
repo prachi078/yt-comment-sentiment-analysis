@@ -13,9 +13,12 @@ import seaborn as sns
 import json
 from mlflow.models import infer_signature
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
-
+tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
+    
+mlflow.set_tracking_uri(tracking_uri)
 
 # logging configuration
 logger = logging.getLogger('model_evaluation')

@@ -3,9 +3,13 @@ import pytest
 import pandas as pd
 import pickle
 from mlflow.tracking import MlflowClient
+from dotenv import load_dotenv
+import os
 
-# Set your remote tracking URI
-mlflow.set_tracking_uri("http://ec2-13-232-230-230.ap-south-1.compute.amazonaws.com:5000/")
+load_dotenv()
+tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
+    
+mlflow.set_tracking_uri(tracking_uri)
 
 @pytest.mark.parametrize("model_name, stage, vectorizer_path", [
     ("yt_chrome_plugin_model", "staging", "tfidf_vectorizer.pkl"),  # Replace with your actual model name and vectorizer path
