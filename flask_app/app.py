@@ -20,12 +20,7 @@ import matplotlib.dates as mdates
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
-    
 # Define the preprocessing function
 def preprocess_comment(comment):
     """Apply preprocessing transformations to a comment."""
@@ -58,8 +53,7 @@ def preprocess_comment(comment):
 # Load the model and vectorizer from the model registry and local storage
 def load_model_and_vectorizer(model_name, model_version, vectorizer_path):
     # Set MLflow tracking URI to your server
-    mlflow.set_tracking_uri(tracking_uri)
-
+    mlflow.set_tracking_uri("http://ec2-13-233-192-59.ap-south-1.compute.amazonaws.com:5000/")  # Replace with your MLflow tracking URI
     client = MlflowClient()
     model_uri = f"models:/{model_name}/{model_version}"
     model = mlflow.pyfunc.load_model(model_uri)
@@ -68,6 +62,10 @@ def load_model_and_vectorizer(model_name, model_version, vectorizer_path):
 
 # Initialize the model and vectorizer
 model, vectorizer = load_model_and_vectorizer("yt_chrome_plugin_model", "1", "./tfidf_vectorizer.pkl")  # Update paths and versions as needed
+
+@app.route('/')
+def home():
+    return "Welcome to our flask api"
 
 @app.route('/predict_with_timestamps', methods=['POST'])
 def predict_with_timestamps():
