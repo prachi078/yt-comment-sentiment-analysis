@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/yt-comment-sentiment-analysis/yt-comment-sentiment-analysis/mlruns/210100455852456030/4ba710a8f8684c3897b9c56f7841a333/artifacts
+end_time: 1733840654546
+entry_point_name: ''
+experiment_id: '210100455852456030'
+lifecycle_stage: active
+run_id: 4ba710a8f8684c3897b9c56f7841a333
+run_name: painted-shoat-762
+run_uuid: 4ba710a8f8684c3897b9c56f7841a333
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733840643558
+status: 3
+tags: []
+user_id: runner
